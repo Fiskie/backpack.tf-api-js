@@ -1,0 +1,43 @@
+{
+  "name": "backpack.tf-api",
+  "version": "0.1.0",
+  "description": "backpack.tf web API bindings",
+  "author": {
+    "name": "fisk",
+    "url": "http://fiskie.me"
+  },
+  "contributors": [
+    {
+      "name": "fisk",
+      "email": "myself@fiskie.me",
+      "url": "http://fiskie.me"
+    }
+  ],
+  "files": [
+    "dist/commonjs/"
+  ],
+  "main": "dist/commonjs/BackpackTF.js",
+  "typings": "dist/commonjs/BackpackTF",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "@types/node": "^8.0.17",
+    "axios": "^0.16.2",
+    "typescript": "^2.4.2"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "readmeFilename": "README.md",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "i": "^0.3.5",
+    "mocha": "^3.4.2",
+    "printf": "^0.2.5",
+    "ts-mocha": "^1.0.3",
+    "typescript": "^2.4.2"
+  }
+}
