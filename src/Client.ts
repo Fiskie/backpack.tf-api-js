@@ -1,17 +1,18 @@
-import {AxiosPromise} from "axios";
+import {AxiosResponse} from "axios";
+import {Command} from "./Commands/Command";
 const axios = require("axios");
 
 export class Client {
     private options: Options;
 
-    constructor(options: Options) {
+    constructor(options: Options = {}) {
         this.options = options;
 
         if (this.options.baseUri === undefined)
             this.options.baseUri = "https://backpack.tf";
     }
 
-    run(command: Command): AxiosPromise {
+    async run(command: Command): Promise<AxiosResponse> {
         let params = command.getParams();
 
         // backpack.tf client API key
@@ -28,7 +29,7 @@ export class Client {
 
         const url = this.options.baseUri + command.getURI();
 
-        return axios({
+        return await axios({
             method: command.getMethod(),
             url: url,
             data: params

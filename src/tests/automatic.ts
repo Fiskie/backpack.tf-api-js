@@ -1,11 +1,10 @@
-const Pulse = require('../dist/commonjs/commands/Automatic/Pulse').Pulse;
-const NotifyOfferCompleted = require("../dist/commonjs/commands/Automatic/NotifyOfferCompleted").NotifyOfferCompleted;
+const Pulse = require('../Commands/Automatic/Pulse').Pulse;
+const NotifyOfferCompleted = require("../Commands/Automatic/NotifyOfferCompleted").NotifyOfferCompleted;
 
 const expect = require("chai").expect;
-const printf = require("printf");
 
-describe("automatic-commands", function() {
-    it("Pulse / IHeartBeat", function() {
+describe("automatic-commands", () => {
+    it("Pulse / IHeartBeat", () => {
         const cmd = new Pulse("1234", "abcd");
 
         expect(cmd.getMethod()).to.equal("POST");
@@ -17,7 +16,7 @@ describe("automatic-commands", function() {
         expect(params.steamid).to.equal("1234");
     });
 
-    it("NotifyOfferCompleted / IOfferDetails", function() {
+    it("NotifyOfferCompleted / IOfferDetails", () => {
         const cmd = new NotifyOfferCompleted("1234", "offerid", "hello world");
 
         expect(cmd.getMethod()).to.equal("POST");

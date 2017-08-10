@@ -1,3 +1,5 @@
+import {Command} from "../Command"
+
 export class NotifyOfferCompleted implements Command {
     private steamid;
     private offer;

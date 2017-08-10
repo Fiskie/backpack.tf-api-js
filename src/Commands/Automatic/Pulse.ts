@@ -1,3 +1,5 @@
+import {Command} from "../Command"
+
 export class Pulse implements Command {
     private steamid;
     private etag;

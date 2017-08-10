@@ -1,6 +1,6 @@
 import {Client} from "./Client";
-import {Pulse} from "./commands/Automatic/Pulse";
-import {NotifyOfferCompleted} from "./commands/Automatic/NotifyOfferCompleted";
+import {Pulse} from "./Commands/Automatic/Pulse";
+import {NotifyOfferCompleted} from "./Commands/Automatic/NotifyOfferCompleted";
 
 module.exports = {
     Client: Client,

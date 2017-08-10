@@ -1,4 +1,4 @@
-interface Command {
+export interface Command {
     /**
      * The HTTP request variable (POST, GET, PUT, etc).
      */
